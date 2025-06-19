@@ -1,2 +1,4 @@
 This is first line!
 This is mny second file
+adding more line 
+coonfig --global usename
