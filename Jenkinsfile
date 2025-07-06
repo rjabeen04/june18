@@ -1,21 +1,22 @@
 pipeline {
     agent any
 
+    tools {
+        git 'Default'
+    }
+
     stages {
-        stage('Clone Repo') {
+        stage('Checkout') {
             steps {
-                echo 'Cloning GitHub repository...'
                 checkout scm
             }
         }
-
         stage('List Files') {
             steps {
                 echo 'Listing files in workspace:'
                 sh 'ls -l'
             }
         }
-
         stage('Display File Content') {
             steps {
                 echo 'Displaying data.txt content:'
